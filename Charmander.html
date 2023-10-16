@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Charmander</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('img/4046676.jpg'); /* Substitua 'seu-papel-de-parede.jpg' pelo caminho da sua imagem */
+            background-size: cover; /* Ajusta a imagem para cobrir todo o corpo */
+            background-repeat: no-repeat; /* Evita a repetição da imagem */
+            background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #FF7F50; /* Cor vermelha */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        .pokemon-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .pokemon-image {
+            flex: 1;
+            text-align: center;
+        }
+        .pokemon-image img {
+            max-width: 100%;
+            height: auto;
+            animation: sway 2s ease-in-out infinite alternate;
+        }
+        .pokemon-details {
+            flex: 2;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+        p {
+            font-size: 16px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .pokemon-stats {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-bar {
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .stat-fill {
+            height: 100%;
+            border-radius: 5px;
+            background-color: #FF7F50;
+            transition: width 0.5s ease-in-out;
+        }
+
+        /* Animação de balanço */
+        @keyframes sway {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(2deg);
+            }
+        }
+
+        /* Estilo para as imagens de fraquezas */
+        .weakness-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+
+        /* Estilo para as imagens de tipos */
+        .type-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+        }
+		.menu {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Alinhar os botões e os textos abaixo */
+        }
+
+        .menu button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu button img {
+            width: 40px; /* Tamanho das imagens dos botões */
+            height: auto;
+        }
+
+        .menu button span {
+            margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .menu button:hover {
+            transform: scale(1.2);
+        }
+
+        .menu button:hover span {
+            color: #ffd700; /* Cor do brilho (dourado) */
+            text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700; /* Sombras para criar o brilho */
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pokédex - Charmander</h1>
+		  <nav class="menu">
+            <a href="sobre.html">
+                <button role="button"><img src="img/icons8-pokedex-96.png" alt="Sobre"><span>Sobre</span></button>
+            </a>
+            <a href="Contatos.html">
+                <button id="botaoContatos"><img src="img/icons8-pokebola-48.png" alt="Contate-nos"><span>Contatos</span></button>
+            </a>
+            <a href="index.html">
+                <button id="botaoPokedex"><img src="img/6e96920ff838cd617133599359508c3d.png" alt="Pokedex"><span>Pokedex</span></button>
+            </a>
+        </nav>
+		
+    </header>
+    <div class="container">
+        <div class="pokemon-info">
+            <div class="pokemon-image">
+                <img src="img/004.png" alt="Imagem do Charmander">
+                <h2>Estatísticas:</h2>
+                <div class="pokemon-stats">
+                    <h3>HP</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 39%;">&nbsp;</div>
+                    </div>
+                    <h3>Ataque</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 52%;"></div>
+                    </div>
+                    <h3>Defesa</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 43%;"></div>
+                    </div>
+                    <h3>Ataque Especial</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 60%;"></div>
+                    </div>
+                    <h3>Defesa Especial</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 50%;"></div>
+                    </div>
+                    <h3>Velocidade</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 65%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-details">
+                <h2>Número na Pokédex: #004</h2>
+                <h2>Nome: Charmander</h2>
+                <h2>Tipo:</h2>
+                <img class="type-icon" src="img/pokemon-3414807_1280.png" alt="Ícone de Fogo">Fogo
+              <h2>Altura: 0,6 metros</h2>
+                <h2>Peso: 8,5 quilogramas</h2>
+                <h2>Fraquezas:</h2>
+                <ul>
+                    <li><img class="weakness-icon" src="img/Daco_1512493.png" alt="Ícone de Água">Água</li>
+                    <li><img class="weakness-icon" src="img/pokemon-3418255_1280.png" alt="Ícone de Rocha">Rocha</li>
+                    <li><img class="weakness-icon" src="img/512px-Pokémon_Electric_Type_Icon.svg.png" alt="Ícone de Elétrico">Elétrico</li>
+                </ul>
+                <h2>Estatísticas:</h2>
+              <h2>Descrição:</h2>
+                <p>
+                    Charmander é um Pokémon do tipo Fogo. Ele possui uma chama na ponta de sua cauda que queima mais brilhantemente à medida que ele se torna mais forte. Charmander é um dos Pokémon iniciais da região de Kanto e é conhecido por sua evolução em Charizard, um poderoso Pokémon do tipo Fogo/Voador.
+                </p>
+                <h2>Habilidades:</h2>
+                <ul>
+                    <li>Blaze: A habilidade Blaze aumenta o poder dos movimentos do tipo Fogo quando a saúde de Charmander está baixa.</li>
+                </ul>
+                <h2>Evolução:</h2>
+<ul>
+    <li>
+        <img src="img/004.png" alt="Charmander" style="width: 50px; height: 50px; margin-right: 10px; margin-bottom: 10px;">
+        (16)➔ 
+        <img src="img/005.png" alt="Charmeleon" style="width: 70px; height: 70px; margin-right: 10px; margin-bottom: 10px;">
+        (36)➔
+        <img src="img/006.png" alt="Charizard" width="149" height="151" style="width: 120px; height: 120px; margin-right: px; margin-bottom: 10px;">
+    </li>
+    <li></li>
+</ul>
+
+
+                <h2>Movimentos Conhecidos:</h2>
+                <ul>
+                    <li>Scratch</li>
+                    <li>Growl</li>
+                    <li>Ember</li>
+                    <li>Smokescreen</li>
+                </ul>
+                <h2>Curiosidades:</h2>
+                <ul>
+                    <li>Charmander é um dos Pokémon iniciais da região de Kanto, oferecido aos treinadores pelo Professor Carvalho.</li>
+                    <li>Ele é conhecido por sua lealdade e por sua chama na cauda que queima mais brilhantemente quando ele está feliz.</li>
+                    <li>Charmander evolui para Charmeleon e, finalmente, para Charizard.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

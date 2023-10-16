@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contate-nos</title>
+    <style>
+        /* Estilos gerais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("img/2b3b04771ccca26c3dd96d781b0117ca (1).jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        .center-images {
+            display: flex;
+            justify-content: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Estilos para os ícones de redes sociais */
+        .social-icons {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+            margin-bottom: 20px; /* Adiciona um espaço vertical entre os ícones e o texto abaixo */
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 24px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #0073e6;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.8); /* Cor de fundo com transparência */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 20px;
+            max-width: 20%; /* Define a largura máxima do bloco de conteúdo */
+            margin-left: auto; /* Centraliza o bloco à direita */
+            margin-right: auto; /* Centraliza o bloco à esquerda */
+        }
+
+        /* Estilos para os botões de redes sociais */
+        .social-buttons {
+            text-align: center;
+        }
+
+        .social-buttons a {
+            text-decoration: none;
+            margin: 5px;
+            display: inline-block;
+            transition: transform 0.2s ease; /* Adicionando uma transição suave */
+        }
+
+        .social-buttons img {
+            width: 30px; /* Tamanho das imagens dos botões (ajustado para 30 pixels) */
+            height: auto;
+        }
+
+        .social-buttons a:hover {
+            transform: translateY(-5px); /* Levantar levemente a imagem quando o mouse passar sobre ela */
+        }
+
+        .menu {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Alinhar os botões e os textos abaixo */
+        }
+
+        .menu button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu button img {
+            width: 40px; /* Tamanho das imagens dos botões */
+            height: auto;
+        }
+
+        .menu button span {
+            margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .menu button:hover {
+            transform: scale(1.2);
+        }
+
+        .menu button:hover span {
+            color: #ffd700; /* Cor do brilho (dourado) */
+            text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700; /* Sombras para criar o brilho */
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Contate-nos</h1>
+        <nav class="menu">
+            <a href="sobre.html">
+                <button role="button"><img src="img/icons8-pokedex-96.png" alt="Sobre"><span>Sobre</span></button>
+            </a>
+            <a href="Contatos.html">
+                <button id="botaoContatos"><img src="img/Poké_Ball_icon.svg.png" alt="Contate-nos"><span>Contatos</span></button>
+            </a>
+            <a href="index.html">
+                <button id="botaoPokedex"><img src="img/6e96920ff838cd617133599359508c3d.png" alt="Pokedex"><span>Pokedex</span></button>
+            </a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Entre em Contato</h2>
+        <p>Estamos ansiosos para ouvir de você. Entre em contato conosco através de nossas redes sociais ou formulário de contato.</p>
+    </div>
+
+    <!-- Botões de imagem para redes sociais -->
+    <div class="social-buttons">
+        <a href="https://www.facebook.com/people/Matheus-Lopes-Nogueira-Lima/pfbid0x3NZ6gecHmDpWZChStEnPSVgavBURWuMBwcyefTPYDYiwjzUy2mybr56XwbMBHGxl/" target="_blank"><img src="img/Facebook_f_logo_(2019).svg.webp" alt="Facebook"></a>
+        <a href="https://twitter.com/matheuslnl" target="_blank"><img src="img/124021.png" alt="Twitter"></a>
+        <a href="https://www.instagram.com/lopesnogueiralima/" target="_blank"><img src="img/pngwing.com (1).png" alt="Instagram"></a>
+        <a href="https://www.linkedin.com/in/matheus-lopes-141816247/" target="_blank"><img src="img/LinkedIn_icon.svg" alt="LinkedIn"></a>
+    </div>
+
+    <div class="content">
+        <h2>Formulário de Contato</h2>
+        <p>Se preferir, você também pode entrar em contato conosco preenchendo o formulário abaixo:</p>
+        
+        <!-- Formulário de Contato -->
+        <form action="seu_script_de_processamento.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensagem">Mensagem
+:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

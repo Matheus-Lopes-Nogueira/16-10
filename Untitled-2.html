@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .bar-container {
+    width: 500px; /* Largura total da barra */
+    height: 25px; /* Altura da barra */
+    background-color: lightgray; /* Cor de fundo da barra */
+       border: 2px solid rgba( 255, 255, 255, .5);
+    border-right: 2px solid rgba( 255, 255, 255, .5);
+    border-bottom: 2px solid rgba( 255, 255, 255, .5);
+	  border-radius: 20px;
+  }
+
+  .bar {
+    height: 100%; /* Altura das barras internas (100% da altura da barra) */
+    display: inline-block; /* Exibição em linha para que as barras fiquem lado a lado */
+  }
+
+  .green-bar {
+    width: 50%; /* Largura da barra verde (50% da largura total) */
+    background-color: green; /* Cor da barra verde */
+	   border-right: 20px;
+  }
+
+  .yellow-bar {
+    width: 25%; /* Largura da barra amarela (25% da largura total) */
+    background-color: yellow; /* Cor da barra amarela */
+  }
+
+  .red-bar {
+    width: 25%; /* Largura da barra vermelha (25% da largura total) */
+    background-color: red; /* Cor da barra vermelha */
+  }
+</style>
+</head>
+<body>
+  <div class="bar-container">
+    <div class="bar green-bar"></div>
+    <div class="bar yellow-bar"></div>
+    <div class="bar red-bar"></div>
+  </div>
+</body>
+</html>

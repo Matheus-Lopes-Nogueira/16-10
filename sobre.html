@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <style>
+        body {
+            background-image: url('img/pxfuel.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilos gerais para a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 200px;
+            max-width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .interactive-text {
+            display: none;
+        }
+
+        .button-show-info {
+            background-color: #0073e6;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+		        .menu {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Alinhar os botões e os textos abaixo */
+        }
+
+        .menu button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu button img {
+            width: 40px; /* Tamanho das imagens dos botões */
+            height: auto;
+        }
+
+        .menu button span {
+            margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .menu button:hover {
+            transform: scale(1.2);
+        }
+
+        .menu button:hover span {
+            color: #ffd700; /* Cor do brilho (dourado) */
+            text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700; /* Sombras para criar o brilho */
+        }
+		
+		a {
+        text-decoration: none;
+    	}
+		
+    </style>
+</head>
+<body>
+    <header class="a">
+        <h1>Sobre a Pokedex</h1>
+        <nav class="menu">
+            <a href="sobre.html"><button><img src="img/icons8-pokedex-96.png" alt="Sobre"><span>Sobre</span></button></a>
+            <a href="Contatos.html"><button id="botaoContatos"><img src="img/Poké_Ball_icon.svg.png" alt="Contate-nos"><span>Contatos</span></button></a>
+            <a href="index.html"><button id="botaoPokedex"><img src="img/6e96920ff838cd617133599359508c3d.png" alt="Pokedex"><span>Pokedex</span></button></a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>O que é Pokemon?</h2>
+        <p>Pokémon são seres incríveis e misteriosos que habitam um universo repleto de aventuras e descobertas. Eles vêm em uma inúmera variedade de formas, tamanhos e tipos, cada um com suas próprias características únicas. Desde os poderosos dragões até os adoráveis Pokémon de estimação, essas criaturas cativam os corações e mentes de pessoas de todas as idades.</p>
+        <p class="interactive-text">Pokémon são criaturas adoráveis que vivem em nosso mundo e têm habilidades especiais. Eles podem ser nossos amigos e nos ajudar em aventuras emocionantes.</p>
+        <h2>O que é uma pokedex?</h2>
+        <p>A Pokédex é uma ferramenta indispensável no mundo dos treinadores Pokémon. Ela é muito mais do que uma simples enciclopédia eletrônica; é um guia abrangente que armazena informações detalhadas sobre as várias espécies de criaturas conhecidas como Pokémon.</p>
+        <p>Um site de Pokedex, como o nosso, é um lugar onde podemos aprender sobre diferentes Pokémon, seus tipos, como eles evoluem e muito mais. É um guia mágico para nos tornarmos verdadeiros treinadores Pokémon!</p>
+    </div>
+</body>
+</html>

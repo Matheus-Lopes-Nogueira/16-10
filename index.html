@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pokedex</title>
+  <style type="text/css">
+    /* Estilos gerais */
+    body {
+      margin: 0;
+      background-image: url("img/pokemon_legends_1200x675_21012022125836.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* Estilos para o controle de música */
+    .music-control {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+    }
+
+    .music-control button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 0 5px;
+      padding: 0;
+      color: #fff;
+      font-size: 24px;
+    }
+
+    div {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    @keyframes swing {
+      0%, 100% {
+        transform: rotate(0deg);
+      }
+      50% {
+        transform: rotate(5deg);
+      }
+    }
+
+    /* Estilos do cabeçalho */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Estilos dos botões */
+    .menu {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end; /* Alinhar os botões e os textos abaixo */
+    }
+
+    .menu button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      margin: 0 10px;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu button img {
+      width: 40px; /* Tamanho das imagens dos botões */
+      height: auto;
+    }
+
+    .menu button span {
+      margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+
+    .menu button:hover {
+      transform: scale(1.2);
+    }
+
+    .menu button:hover span {
+      color: #ffd700; /* Cor do brilho (dourado) */
+      text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700; /* Sombras para criar o brilho */
+    }
+
+    /* Restante dos estilos (mantive os estilos anteriores) */
+    .swinging-image {
+      width: 800px;
+      height: auto;
+      animation: swing 5s infinite;
+      transition: transform 0.3s ease;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .image {
+      width: 162px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .center-images {
+      display: flex;
+      justify-content: center;
+    }
+
+    .image:hover {
+      transform: scale(1.25);
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="menu">
+      <a href="sobre.html">
+        <button role="button"><img src="img/icons8-pokedex-96.png" alt="Sobre"><span>Sobre</span></button>
+      </a>
+      <button id="botaoContatos"><img src="img/Poké_Ball_icon.svg.png" alt="Contate-nos"><span>Contatos</span></button>
+      <a href="index.html">
+        <button id="botaoPokedex"><img src="img/6e96920ff838cd617133599359508c3d.png" alt="Pokedex"><span>Pokedex</span></button>
+      </a>
+    </nav>
+  </header>
+
+  <div>
+    <img src="img/pokemon-logo-8.png" alt="Imagem Balançante" class="swinging-image">
+  </div>
+
+  <audio loop autoplay>
+    <source src="music/Pokemon.mp3" type="audio/mp3">
+  </audio>
+
+  <div class="center-images">
+    <div class="image-container">
+		
+		<a href="Baulbassar.html">
+      <img src="img/WnES.gif" alt="Imagem 1" class="image">
+			</a>
+		
+		<a href="Charmander.html">
+      <img src="img/tumblr_ma0tijLFPg1rfjowdo1_500.gif" alt="Imagem2" class="image">
+		</a>
+		
+      <img src="img/d83e9951f28fc811c1166b16dcaec930_w200.gif" alt="Imagem 3" class="image">
+		
+    </div>
+  </div>
+
+  <script>
+    // Adicione um ouvinte de eventos ao botão "Contatos"
+    document.getElementById("botaoContatos").addEventListener("click", function() {
+      // Redireciona para a página de contatos quando o botão é clicado
+      window.location.href = "contatos.html";
+    });
+  </script>
+</body>
+</html>

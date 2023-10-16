@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Charmander</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('img/.png'); /* Substitua 'seu-papel-de-parede.jpg' pelo caminho da sua imagem */
+            background-size: cover; /* Ajusta a imagem para cobrir todo o corpo */
+            background-repeat: no-repeat; /* Evita a repetição da imagem */
+            background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00BFFF; /* Cor vermelha */
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        .pokemon-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .pokemon-image {
+            flex: 1;
+            text-align: center;
+        }
+        .pokemon-image img {
+            max-width: 100%;
+            height: auto;
+            animation: sway 2s ease-in-out infinite alternate;
+        }
+        .pokemon-details {
+            flex: 2;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+        p {
+            font-size: 16px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .pokemon-stats {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-bar {
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .stat-fill {
+            height: 100%;
+            border-radius: 5px;
+            background-color: #00BFFF;
+            transition: width 0.5s ease-in-out;
+        }
+
+        /* Animação de balanço */
+        @keyframes sway {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(2deg);
+            }
+        }
+
+        /* Estilo para as imagens de fraquezas */
+        .weakness-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+
+        /* Estilo para as imagens de tipos */
+        .type-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+        }
+		.menu {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Alinhar os botões e os textos abaixo */
+        }
+
+        .menu button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu button img {
+            width: 40px; /* Tamanho das imagens dos botões */
+            height: auto;
+        }
+
+        .menu button span {
+            margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .menu button:hover {
+            transform: scale(1.2);
+        }
+
+        .menu button:hover span {
+            color: #ffd700; /* Cor do brilho (dourado) */
+            text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700; /* Sombras para criar o brilho */
+        }
+				.menu button span {
+  margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  color: #fff; /* Cor do texto branca */
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff; /* Sombra branca para criar o brilho */
+}
+
+        a {
+            text-decoration: none;
+        }
+		.corner-image-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 100px; /* Largura da imagem quando oculta */
+            height: auto;
+            opacity: 0.5; /* Opacidade inicial (imagem parcialmente visível) */
+            transition: width 0.3s, opacity 0.3s; /* Transições para animação suave */
+            cursor: pointer;
+        }
+        .corner-image-left:hover {
+            width: 150px; /* Largura da imagem quando completamente visível */
+            opacity: 1; /* Opacidade quando o mouse passa sobre ela */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pokédex - Charmander</h1>
+    <nav class="menu">
+		      <a href="index.html">
+        <button id="botaoPokedex"><img src="img/6e96920ff838cd617133599359508c3d.png" alt="Pokedex"><span>Pokedex</span></button>
+      </a>
+      <a href="sobre.html">
+        <button role="button"><img src="img/icons8-pokedex-96.png" alt="Sobre"><span>Sobre</span></button>
+		<a href="Contatos.html">
+      <button id="botaoContatos"><img src="img/Poké_Ball_icon.svg.png" alt="Contate-nos"><span>Contatos</span></button></a>
+		        <a href="Charmander.html">
+                <img class="corner-image-left" src="img/004.png" alt="Charizard">
+            </a>
+    </nav>
+  </header>
+		
+    </header>
+    <div class="container">
+        <div class="pokemon-info">
+            <div class="pokemon-image">
+                <img src="img/007.png" alt="Imagem do Charmander">
+                <h2>Estatísticas:</h2>
+                <div class="pokemon-stats">
+                    <h3>HP</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 44%;">&nbsp;</div>
+                    </div>
+                    <h3>Ataque</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 48%;"></div>
+                    </div>
+                    <h3>Defesa</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 65%;"></div>
+                    </div>
+                    <h3>Ataque Especial</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 50%;"></div>
+                    </div>
+                    <h3>Defesa Especial</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 64%;"></div>
+                    </div>
+                    <h3>Velocidade</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 43%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-details">
+                <h2>Número na Pokédex: #007</h2>
+                <h2>Nome: Squirtle</h2>
+                <h2>Tipo:</h2>
+                <img class="type-icon" src="img/Daco_1512493.png" alt="Ícone de Fogo">agua&nbsp;
+              <h2>Altura: 0,6 metros</h2>
+                <h2>Peso: 8,5 quilogramas</h2>
+                <h2>Fraquezas:</h2>
+                <ul>
+                    <li><img class="weakness-icon" src="img/grass.png" alt="Ícone de Água">Grama</li>
+                    <li><img class="weakness-icon" src="img/512px-Pokémon_Electric_Type_Icon.svg.png" alt="Ícone de Elétrico">Elétrico</li>
+                </ul>
+              <h2>Descrição:</h2>
+                <p>
+                  Squirtle é um Pokémon do tipo Água conhecido por sua aparência de casco, sua habilidade de lançar poderosos jatos d'água e sua natureza amigável. Ele é frequentemente escolhido por treinadores iniciantes e evolui para Wartortle e Blastoise com o tempo. Squirtle é um nadador habilidoso e símbolo de amizade, disposto a proteger seus treinadores a todo custo.
+              </p>
+                <h2>Habilidades:</h2>
+                <ul>
+                    <li>Torrente: Aumenta o poder de movimentos do tipo Água quando a saúde está baixa.</li>
+					
+					<li>Wide Movepool: Pode aprender uma variedade de movimentos, tornando-se versátil em batalha.</li>
+					
+					<li>Habilidade de Natação: Não é uma habilidade do jogo, mas ele é conhecido por ser um nadador excepcional.</li>
+                </ul>
+                <h2>Evolução:</h2>
+<ul>
+    <li>
+        <img src="img/007.png" style="width: 50px; height: 50px; margin-right: 10px; margin-bottom: 10px;">
+        (16)➔ 
+        <img src="img/008.png" style="width: 70px; height: 70px; margin-right: 10px; margin-bottom: 10px;">
+        (36)➔
+        <img src="img/009.png" alt="Charizard" width="149" height="151" style="width: 120px; height: 120px; margin-right: px; margin-bottom: 10px;">
+    </li>
+    <li></li>
+</ul>
+
+
+                <h2>Movimentos Conhecidos:</h2>
+                <ul>
+                    <li>Jato de Água (Water Gun)</li>
+                    <li>Investida (Tackle)</li>
+                    <li>Chicote de Calda (Tail Whip)</li>
+                    <li>Cauda de Ferro (Iron Tail)</li>
+					<li>Redemoinho (Whirlpool)</li>
+					<li>Hidro Bomba (Hydro Pump)</li>
+                </ul>
+                <h2>Curiosidades:</h2>
+<ul>
+    <li>Squirtle é um dos três Pokémon iniciais da região de Kanto, oferecidos aos treinadores pelo Professor Carvalho, ao lado de Bulbasaur e Charmander.</li>
+    <li>Ele é famoso por sua casca em forma de concha que age como proteção contra ataques.</li>
+    <li>Squirtle passa por uma evolução de três estágios: Squirtle, Wartortle e Blastoise.</li>
+    <li>Na série de desenhos animados Pokémon, Squirtle liderou o "Squirtle Squad," um esquadrão de resgate.</li>
+    <li>Seu vínculo com os treinadores é notável, e eles são conhecidos por sacrificar-se para proteger aqueles a quem estão ligados.</li>
+    <li>Squirtle é um nadador excepcional, sendo ágil na água.</li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

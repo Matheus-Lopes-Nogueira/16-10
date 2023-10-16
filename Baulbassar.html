@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex - Bulbassauro</title>
+    <style>
+        /* Adicione estilos CSS aqui para personalizar a aparência da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('img/3551099.jpg'); /* Substitua 'seu-papel-de-parede.jpg' pelo caminho da sua imagem */
+            background-size: cover; /* Ajusta a imagem para cobrir todo o corpo */
+            background-repeat: no-repeat; /* Evita a repetição da imagem */
+            background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+        .pokemon-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .pokemon-image {
+            flex: 1;
+            text-align: center;
+        }
+        .pokemon-image img {
+            max-width: 100%;
+            height: auto;
+            animation: sway 2s ease-in-out infinite alternate;
+        }
+        .pokemon-details {
+            flex: 2;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+        p {
+            font-size: 16px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .pokemon-stats {
+            display: flex;
+            flex-direction: column;
+        }
+        .stat-bar {
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+        .stat-fill {
+            height: 100%;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            transition: width 0.5s ease-in-out;
+        }
+
+        /* Animação de balanço */
+        @keyframes sway {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(2deg);
+            }
+        }
+
+        /* Estilo para as imagens de fraquezas */
+        .weakness-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+
+        /* Estilo para as imagens de tipos */
+        .type-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 5px;
+        }
+		.menu {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Alinhar os botões e os textos abaixo */
+        }
+
+        .menu button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu button img {
+            width: 40px; /* Tamanho das imagens dos botões */
+            height: auto;
+        }
+
+        .menu button span {
+            margin-top: 5px; /* Espaçamento entre a imagem e o texto */
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+
+        .menu button:hover {
+            transform: scale(1.2);
+        }
+
+        .menu button:hover span {
+            color: #ffd700; /* Cor do brilho (dourado) */
+            text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700, 0 0 30px #ffd700; /* Sombras para criar o brilho */
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+ 	
+    <header>
+        <h1>Pokédex - Bulbassauro</h1>
+		  <nav class="menu">
+            <a href="sobre.html">
+                <button role="button"><img src="img/icons8-pokedex-96.png" alt="Sobre"><span>Sobre</span></button>
+            </a>
+            <a href="Contatos.html">
+                <button id="botaoContatos"><img src="img/icons8-pokebola-48.png" alt="Contate-nos"><span>Contatos</span></button>
+            </a>
+            <a href="index.html">
+                <button id="botaoPokedex"><img src="img/6e96920ff838cd617133599359508c3d.png" alt="Pokedex"><span>Pokedex</span></button>
+            </a>
+        </nav>
+		
+    </header>
+    <div class="container">
+        <div class="pokemon-info">
+            <div class="pokemon-image">
+                <img src="img/001.png" alt="Imagem do Bulbassauro">
+                <h2>Estatísticas:</h2>
+                <div class="pokemon-stats">
+                    <h3>HP</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 45%;">&nbsp;</div>
+                    </div>
+                    <h3>Ataque</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 49%;"></div>
+                    </div>
+                    <h3>Defesa</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 49%;"></div>
+                    </div>
+                    <h3>Ataque Especial</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 65%;"></div>
+                    </div>
+                    <h3>Defesa Especial</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 65%;"></div>
+                    </div>
+                    <h3>Velocidade</h3>
+                    <div class="stat-bar">
+                        <div class="stat-fill" style="width: 45%;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pokemon-details">
+                <h2>Número na Pokédex: #001</h2>
+                <h2>Nome: Bulbassauro</h2>
+                <h2>Tipo:</h2>
+                <img class="type-icon" src="img/grass.png" alt="Ícone de Planta">Planta
+                <img class="type-icon" src="img/512px-Pokémon_Poison_Type_Icon.svg.png" alt="Ícone de Venenoso">Veneno
+              <h2>Altura: 0,7 metros</h2>
+                <h2>Peso: 6,9 quilogramas</h2>
+                <h2>Fraquezas:</h2>
+                <ul>
+                    <li><img class="weakness-icon" src="img/pokemon-3414807_1280.png" alt="Ícone de Fogo">Fogo</li>
+                    <li><img class="weakness-icon" src="img/simbolo gelo png.png" alt="Ícone de Gelo">Gelo</li>
+                    <li><img class="weakness-icon" src="img/Voador.webp" alt="Ícone de Voador">Voador</li>
+                    <li><img class="weakness-icon" src="img/pngwing.com.png" alt="Ícone de Psíquico">Psíquico</li>
+                </ul>
+                <h2>Estatísticas:</h2>
+              <h2>Descrição:</h2>
+                <p>
+                    Bulbassauro é um Pokémon do tipo Planta/Venenoso. Ele é conhecido por ter uma planta bulbosa nas costas, que cresce à medida que ele evolui. Esse bulbo armazena energia solar para que Bulbassauro possa usá-la em seus ataques. Ele é um Pokémon inicial da região de Kanto e é muito popular entre treinadores novatos.
+                </p>
+                <h2>Habilidades:</h2>
+                <ul>
+                    <li>Overgrow: A habilidade Overgrow aumenta o poder dos movimentos do tipo Planta quando a saúde de Bulbassauro está baixa.</li>
+                </ul>
+                <h2>Evolução:</h2>
+<ul>
+    <li>
+        <img src="img/001.png" alt="Bulbassauro" style="width: 50px; height: 50px; margin-right: 10px; margin-bottom: 10px;">
+        (16)➔ 
+        <img src="img/002.png" alt="Ivysaur" style="width: 70px; height: 70px; margin-right: 10px; margin-bottom: 10px;">
+        (32)➔
+        <img src="img/003_f2.png" alt="Venusaur" width="149" height="151" style="width: 120px; height: 120px; margin-right: px; margin-bottom: 10px;">
+    </li>
+    <li></li>
+</ul>
+
+
+                <h2>Movimentos Conhecidos:</h2>
+                <ul>
+                    <li>Tackle</li>
+                    <li>Growl</li>
+                    <li>Leech Seed</li>
+                    <li>Vine Whip</li>
+                </ul>
+                <h2>Curiosidades:</h2>
+                <ul>
+                    <li>Bulbassauro é o primeiro Pokémon na National Pokédex.</li>
+                    <li>Seu nome em japonês é フシギダネ (Fushigidane).</li>
+                    <li>A planta nas costas de Bulbassauro floresce em uma bela flor quando ele evolui para Venusaur.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

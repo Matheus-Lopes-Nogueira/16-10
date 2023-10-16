@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Pokémon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilos CSS para a página */
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: 100vh; /* Define a altura do corpo como 100% da altura da janela */
+            margin: 0; /* Remove margens padrão */
+        }
+        h1 {
+            color: #FF6600;
+        }
+        .question {
+            font-size: 24px;
+            margin: 20px;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+        }
+        .option {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #FF6600;
+            color: white;
+            cursor: pointer;
+            border: none;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Quiz Pokémon</h1>
+    
+    <div class="question" id="question">
+        Pergunta 1: Qual é o tipo inicial de Pikachu?
+    </div>
+
+    <div class="options">
+        <button class="option" onclick="checkAnswer('Elétrico')">Elétrico</button>
+        <button class="option" onclick="checkAnswer('Água')">Água</button>
+        <button class="option" onclick="checkAnswer('Fogo')">Fogo</button>
+        <button class="option" onclick="checkAnswer('Grama')">Grama</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script>
+        // Função para verificar a resposta
+        function checkAnswer(answer) {
+            if (answer === 'Elétrico') {
+                document.getElementById('result').innerHTML = 'Correto! Pikachu é do tipo Elétrico.';
+            } else {
+                document.getElementById('result').innerHTML = 'Incorreto. Tente novamente.';
+            }
+        }
+    </script>
+</body>
+</html>
